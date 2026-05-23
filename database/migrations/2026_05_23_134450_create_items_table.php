@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('lokasi');
             $table->text('deskripsi');
             $table->text('image');
-            $table->foreignId('users_id')->constrained('users')->cascadeOnDelete();
+            $table->foreignId('users_id')->constrained('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
